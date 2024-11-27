@@ -6,3 +6,6 @@ const PASSWORD = 'pass-number';
 app.get('/encode/:text', (req, res) => {
     res.send(Vigenere.Cipher(PASSWORD).crypt(req.params.text));
 });
+app.get('/decode/:text', (req, res) => {
+    res.send(Vigenere.Decipher(PASSWORD).crypt(req.params.text));
+});
